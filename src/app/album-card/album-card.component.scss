@@ -1,0 +1,31 @@
+.card {
+  width: 1024px;
+  min-height: 1024px;
+  box-sizing: border-box;
+  background-color: #7540ad;
+  display:flex;
+  flex-direction: column;
+  color: #f0ebf5;
+
+  .title {
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    font:900 72px Garamond;
+    align-self: center;
+    flex: 0 1 auto;
+    margin-top: 16px;
+  }
+
+  .spacer{
+    flex: 1 1 auto;
+  }
+
+  .artist-name {
+    text-transform: uppercase;
+    letter-spacing: 40px;
+    font:400 32px serif;
+    align-self: center;
+    flex: 0 1 auto;
+    margin-bottom: 32px;
+  }
+}
