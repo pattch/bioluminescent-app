@@ -12,4 +12,4 @@ import { AlbumCardComponent } from './album-card.component';
   imports: [],
   providers: [],
 })
-export class AlbumCardComponentModule { }
+export class AlbumCardModule { }
