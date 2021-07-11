@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AlbumCardComponentModule } from './album-card/album-card.component.module';
+import { SongListModule } from './song-list/song-card.component.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { AlbumCardComponentModule } from './album-card/album-card.component.modu
   imports: [
     AlbumCardComponentModule,
     BrowserModule,
+    SongListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
