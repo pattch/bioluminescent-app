@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 
-import { AlbumCardComponent } from './album-card.component';
+import { AlbumCard } from './album-card';
 
 @NgModule({
   declarations: [
-    AlbumCardComponent
+    AlbumCard
   ],
   exports: [
-    AlbumCardComponent
+    AlbumCard
   ],
   imports: [],
   providers: [],

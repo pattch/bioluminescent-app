@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AlbumCardComponent } from './album-card.component';
+import { PressKitComponent } from './press-kit';
 
-describe('AlbumCardComponent', () => {
-  let component: AlbumCardComponent;
-  let fixture: ComponentFixture<AlbumCardComponent>;
+describe('PressKitComponent', () => {
+  let component: PressKitComponent;
+  let fixture: ComponentFixture<PressKitComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AlbumCardComponent ]
+      declarations: [ PressKitComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AlbumCardComponent);
+    fixture = TestBed.createComponent(PressKitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

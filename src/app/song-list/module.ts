@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 
-import { SongCardComponent } from './song-card.component';
+import { SongCard } from './song-card';
 
 @NgModule({
   declarations: [
-    SongCardComponent
+    SongCard
   ],
   exports: [
-    SongCardComponent
+    SongCard
   ],
   imports: [],
   providers: [],

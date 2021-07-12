@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'press-kit',
-  templateUrl: './press-kit.component.html',
-  styleUrls: ['./press-kit.component.scss']
+  templateUrl: './press-kit.html',
+  styleUrls: ['./press-kit.scss']
 })
-export class PressKitComponent implements OnInit {
+export class PressKit implements OnInit {
 
   constructor() { }
 

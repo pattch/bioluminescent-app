@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 
-import { PressKitComponent } from './press-kit.component';
+import { PressKit } from './press-kit';
+import { AlbumCardModule } from '../album-card';
+import { SongListModule } from '../song-list';
 
 @NgModule({
   declarations: [
-    PressKitComponent
+    PressKit
   ],
   exports: [
-    PressKitComponent
+    PressKit
   ],
-  imports: [],
+  imports: [
+    AlbumCardModule,
+    SongListModule,
+  ],
   providers: [],
 })
 export class PressKitModule { }

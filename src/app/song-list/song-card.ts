@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'song-card',
-  templateUrl: './song-card.component.html',
-  styleUrls: ['./song-card.component.scss']
+  templateUrl: './song-card.html',
+  styleUrls: ['./song-card.scss']
 })
-export class SongCardComponent implements OnInit {
+export class SongCard implements OnInit {
 
   constructor() { }
 
