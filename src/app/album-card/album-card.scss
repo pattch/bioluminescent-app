@@ -3,18 +3,28 @@
   min-height: 1024px;
   box-sizing: border-box;
   background-color: #7540ad;
+  background-image: url("/assets/images/bioluminescent.jpg");
+  background-size: 1024px 1024px;
   display:flex;
   flex-direction: column;
   color: #f0ebf5;
-  border-radius: 6px;
+  border-radius: 16px;
+
+  .title, .artist-name {
+      width: 100%;
+      text-align: center;
+      border-radius: inherit;
+  }
 
   .title {
     text-transform: uppercase;
     letter-spacing: 16px;
-    font:900 80px Garamond;
+    font: 400 80px Garamond;
     align-self: center;
     flex: 0 1 auto;
-    margin-top: 16px;
+    padding-top: 16px;
+    box-shadow: inset 0 200px 100px -100px rgba(0,0,0,0.7);
+    min-height: 200px;
   }
 
   .spacer{
@@ -23,10 +33,11 @@
 
   .artist-name {
     text-transform: uppercase;
-    letter-spacing: 40px;
-    font:400 32px serif;
+    letter-spacing: 30px;
+    font: 900 48px serif;
     align-self: center;
     flex: 0 1 auto;
-    margin-bottom: 32px;
+    padding-bottom: 32px;
+    box-shadow: inset 0 -100px 100px -100px #000000;
   }
 }
