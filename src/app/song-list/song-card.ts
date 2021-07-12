@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Song } from './song';
 
 @Component({
   selector: 'song-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./song-card.scss']
 })
 export class SongCard implements OnInit {
+
+  @Input() songDetails: Song = {songTitle: 'Placeholder', mediaType: 'none'};
 
   constructor() { }
 
