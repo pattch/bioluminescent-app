@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Song } from '../song-list';
 
 const SONG_LIST: ReadonlyArray<Song> = [
-  {songTitle: 'Test', mediaType: 'none'},
-  {songTitle: 'Test', mediaType: 'none'},
+  {title: 'Test', mediaType: 'none'},
+  {title: 'Test', mediaType: 'none'},
 ];
 
 @Component({

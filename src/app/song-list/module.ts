@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { SongCard } from './song-card';
 import { SongList } from './song-list';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,13 @@ import { SongList } from './song-list';
     SongCard,
     SongList,
   ],
-  imports: [],
+  entryComponents: [
+    SongCard,
+    SongList,
+  ],
+  imports: [
+    CommonModule,
+  ],
   providers: [],
 })
 export class SongListModule { }

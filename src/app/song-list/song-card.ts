@@ -8,7 +8,7 @@ import { Song } from './song';
 })
 export class SongCard implements OnInit {
 
-  @Input() songDetails: Song = {songTitle: 'Placeholder', mediaType: 'none'};
+  @Input() song: Song = {title: 'Placeholder', mediaType: 'none'};
 
   constructor() { }
 
