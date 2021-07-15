@@ -1,6 +1,13 @@
 <span class="title">{{song.title}}</span>
 <span class="artwork" *ngIf="song.artwork">{{song.artwork}}</span>
 <!-- TODO: Support displaying the song using file / embedded sources -->
-<!-- <ng-container *ngSwitch="song.mediaType"> -->
-<!-- </ng-container> -->
-
+<ng-container [ngSwitch]="song.mediaSource">
+    <div *ngSwitchCase="'file'" class="embedded-file">
+      <h3>DISPLAYING FILE: {{fileUrl}}</h3>
+      <h4>File type: {{song.audioType}}</h4>
+      <audio controls>
+        <source [src]="fileUrl" [type]="song.audioType">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+</ng-container>
