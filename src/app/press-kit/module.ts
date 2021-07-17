@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 
 import { PressKit } from './press-kit';
 import { AlbumCardModule } from '../album-card';
-import { SongListModule } from '../song-list';
+import { SongCardModule } from '../song-list';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SongListModule } from '../song-list';
   ],
   imports: [
     AlbumCardModule,
-    SongListModule,
+    CommonModule,
+    SongCardModule,
   ],
   providers: [],
 })
