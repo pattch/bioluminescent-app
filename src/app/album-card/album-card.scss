@@ -1,43 +1,108 @@
+@use "sass:math";
+
+/** TODO: Use media queries + mixin to make this responsive!
+
+Example:
+
+@mixin styling($base-width) {
+  // your SCSS here, e.g.
+  #Contents {
+      width: $base-width;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+    @include styling($base-width: 960px);
+}
+@media screen and (min-width: 1171px) {
+    @include styling($base-width: 1160px);
+}
+
+*/
+
+$box-width: 750px;
+$box-height: 750px;
+$title-font-size: math.div($box-width, 20);
+$artist-font-size: math.div($box-width, 25);
 .card {
-  width: 1024px;
-  min-height: 1024px;
-  box-sizing: border-box;
+  width: $box-width;
+  height: $box-height;
   background-color: #7540ad;
-  background-image: url("/assets/images/bioluminescent_mid.jpg");
-  background-size: 1024px 1024px;
-  display:flex;
-  flex-direction: column;
+  box-sizing: border-box;
   color: #f0ebf5;
   border-radius: 16px;
+  overflow: hidden;
 
-  .title, .artist-name {
+  &:hover {
+    .backdrop {
+      filter: blur(0) brightness(105%);
+    }
+
+    .content-container {
+      .title, .artist-name {
+        text-shadow: 2px 2px 15px rgba(255,255,255,1);
+      }
+    }
+  }
+
+  .backdrop {
+    background-image: url("/assets/images/bioluminescent_mid.jpg");
+    background-size: $box-width $box-height;
+    filter: blur(3px) brightness(95%) saturate(80%);
+    width: inherit;
+    height: inherit;
+    box-sizing: border-box;
+    float: left;
+    border-radius: inherit;
+    transition: filter 1s ease-in-out;
+  }
+
+  .content-container {
+    float: left;
+    display:flex;
+    flex-direction: column;
+    width: $box-width;
+    height: $box-height;
+    transform: translateY(-$box-width);
+    margin-bottom: -$box-width;
+    border-radius: inherit;
+
+    .title, .artist-name {
       width: 100%;
       text-align: center;
       border-radius: inherit;
-  }
+      text-shadow: 2px 2px 5px rgba(255,255,255,0.2);
+      transition: text-shadow 1s ease-in-out;
+    }
 
-  .title {
-    text-transform: uppercase;
-    letter-spacing: 16px;
-    font: 400 80px Garamond;
-    align-self: center;
-    flex: 0 1 auto;
-    padding-top: 16px;
-    box-shadow: inset 0 200px 100px -100px rgba(0,0,0,0.7);
-    min-height: 200px;
-  }
+    .title {
+      $title-size: math.div($box-height, 6);
+      $spacing: math.div($title-font-size, 2);
 
-  .spacer{
-    flex: 1 1 auto;
-  }
+      text-transform: uppercase;
+      letter-spacing: $spacing;
+      font: 400 $title-font-size Garamond;
+      align-self: center;
+      flex: 0 1 auto;
+      padding-top: 16px;
+      padding-left: $spacing;
+      min-height: $title-size;
+    }
 
-  .artist-name {
-    text-transform: uppercase;
-    letter-spacing: 30px;
-    font: 900 48px serif;
-    align-self: center;
-    flex: 0 1 auto;
-    padding-bottom: 32px;
-    box-shadow: inset 0 -100px 100px -100px #000000;
+    .spacer {
+      flex: 1 1 auto;
+    }
+
+    .artist-name {
+      $spacing: $artist-font-size;
+
+      text-transform: uppercase;
+      letter-spacing: $spacing;
+      font: 400 $artist-font-size Garamond;
+      align-self: center;
+      flex: 0 1 auto;
+      padding-bottom: 32px;
+      padding-left: $spacing;
+    }
   }
 }
