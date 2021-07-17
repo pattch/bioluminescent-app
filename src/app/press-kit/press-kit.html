@@ -1,14 +1,15 @@
 <div class="content">
   <album-card></album-card>
-  <!-- <song-list [songs]="songList"></song-list> -->
-  <div *ngFor="let song of bioluminescentSongs">
-    <song-card [title]="song.title"
-               [artwork]="song.artwork"
-               [mediaSource]="song.mediaSource"
-               [filename]="song.filename"
-               [audioType]="song.audioType"
-               [url]="song.url"
-    >
-    </song-card>
+  <div class="card">
+    <div *ngFor="let song of bioluminescentSongs">
+      <song-card [title]="song.title"
+                [artwork]="song.artwork || 'bioluminescent_small.jpg'"
+                [mediaSource]="song.mediaSource"
+                [filename]="song.filename"
+                [audioType]="song.audioType"
+                [url]="song.url"
+      >
+      </song-card>
+    </div>
   </div>
 </div>

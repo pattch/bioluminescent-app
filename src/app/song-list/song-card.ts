@@ -26,9 +26,14 @@ export class SongCard implements OnInit {
     return `/assets/music/${this.filename}`;
   }
 
+  get artworkUrl(): string {
+    return `/assets/images/${this.artwork}`;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log('xxxx title', this.title, 'artwork', this.artwork)
   }
 
 }
