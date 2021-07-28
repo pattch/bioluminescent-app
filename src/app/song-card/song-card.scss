@@ -1,17 +1,28 @@
 .song-container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 16px;
-  background-color: #f89406;
+  margin: 32px 0 32px 0;
+  background-color: #913d88;
   height: 100px;
-  border: 8px solid #d35400;
+  border-radius: 8px;
   align-items: center;
+  transition: background-color 1s ease-in-out;
+
+  &:hover {
+    background-color: #b92a6d;
+  }
 
   img.artwork {
     width: 64px;
     height: 64px;
     margin: 20px;
     border-radius: 50%;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font: 100 24px sans-serif;
+    color: #f0f0d6;
   }
 
   .spacer {
