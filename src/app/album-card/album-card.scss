@@ -35,7 +35,7 @@ $artist-font-size: math.div($box-width, 25);
 
   &:hover {
     .backdrop {
-      filter: blur(0) brightness(105%);
+      filter: brightness(105%);
     }
 
     .content-container {
@@ -48,7 +48,7 @@ $artist-font-size: math.div($box-width, 25);
   .backdrop {
     background-image: url("/assets/images/bioluminescent_mid.jpg");
     background-size: $box-width $box-height;
-    filter: blur(3px) brightness(95%) saturate(80%);
+    filter: brightness(95%) saturate(80%);
     width: inherit;
     height: inherit;
     box-sizing: border-box;
