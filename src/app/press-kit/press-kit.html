@@ -1,6 +1,8 @@
 <div class="content">
   <album-card></album-card>
   <div class="card">
+    <!-- TODO: Add videos here -->
+    <!-- TODO: Consider simply writing these songs out here -->
     <div *ngFor="let song of bioluminescentSongs">
       <song-card [title]="song.title"
                 [artwork]="song.artwork || 'bioluminescent_small.jpg'"
