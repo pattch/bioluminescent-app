@@ -1,1 +1,11 @@
-<!-- TODO: Embed a video here -->
+<div class="video-container">
+  <iframe [width]="width"
+          [height]="height"
+          [src]="source | safe"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+  >
+  </iframe>
+</div>

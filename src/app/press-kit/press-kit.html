@@ -1,8 +1,16 @@
 <div class="content">
   <album-card></album-card>
+  <embedded-video [width]="videoWidth"
+                  [height]="videoHeight"
+                  [source]="'https://www.youtube.com/embed/E-sql3OUo34'"
+  >
+  </embedded-video>
+  <embedded-video [width]="videoWidth"
+                  [height]="videoHeight"
+                  [source]="'https://www.youtube.com/embed/V2Pct1RsFec'"
+  >
+  </embedded-video>
   <div class="card">
-    <embedded-video>
-    </embedded-video>
     <!-- TODO: Consider simply writing these songs out here -->
     <div *ngFor="let song of bioluminescentSongs">
       <song-card [title]="song.title"

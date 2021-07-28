@@ -26,6 +26,9 @@ const fileParams = {
 })
 export class PressKit {
 
+  readonly videoWidth = 854;
+  readonly videoHeight = 480;
+
   // TODO: Consider simply implementing this in the template
   readonly bioluminescentSongs: Song[] = [
     {...fileParams, title: 'intro', filename: 'intro.mp3'},

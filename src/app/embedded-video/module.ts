@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 
 import { EmbeddedVideo } from './embedded-video';
+import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared';
 
 @NgModule({
   declarations: [
@@ -9,7 +11,10 @@ import { EmbeddedVideo } from './embedded-video';
   exports: [
     EmbeddedVideo
   ],
-  imports: [],
+  imports: [
+    CommonModule,
+    SharedModule,
+  ],
   providers: [],
 })
 export class EmbeddedVideoModule { }
