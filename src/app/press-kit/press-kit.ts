@@ -1,8 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-// TODO: Stop wrapping this as <song-list>. Instead, this can just be part of the declared UI.
-// That way, when / if we want to support multiple formats of interspersed content (e.g. video)
-// or text, they can naturally and directly fit in the template instead of being jammed in here.
+import { Component } from '@angular/core';
 
 interface Song {
   title: string;
@@ -28,8 +24,9 @@ const fileParams = {
   templateUrl: './press-kit.html',
   styleUrls: ['./press-kit.scss']
 })
-export class PressKit implements OnInit {
+export class PressKit {
 
+  // TODO: Consider simply implementing this in the template
   readonly bioluminescentSongs: Song[] = [
     {...fileParams, title: 'intro', filename: 'intro.mp3'},
     {...fileParams, title: '24/7', filename: '24_7.mp3'},
@@ -39,8 +36,5 @@ export class PressKit implements OnInit {
   ];
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

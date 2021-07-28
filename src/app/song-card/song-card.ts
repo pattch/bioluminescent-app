@@ -1,12 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'song-card',
   templateUrl: './song-card.html',
   styleUrls: ['./song-card.scss']
 })
-export class SongCard implements OnInit {
-
+export class SongCard {
   @Input() title: string = '';
   @Input() artwork: string = '';
 
@@ -30,8 +29,5 @@ export class SongCard implements OnInit {
   }
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
