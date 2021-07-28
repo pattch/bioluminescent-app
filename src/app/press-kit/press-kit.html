@@ -1,4 +1,6 @@
-<div class="content">
+<div class="content" [ngClass]="{'navbar-included': navBarIncluded}">
+  <nav-bar *ngIf="navBarIncluded">
+  </nav-bar>
   <album-card></album-card>
   <embedded-video [width]="videoWidth"
                   [height]="videoHeight"

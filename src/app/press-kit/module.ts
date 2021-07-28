@@ -4,6 +4,8 @@ import { PressKit } from './press-kit';
 import { AlbumCardModule } from '../album-card';
 import { EmbeddedVideoModule } from '../embedded-video';
 import { SongCardModule } from '../song-card';
+import { NavBarModule } from '../nav-bar';
+
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -17,6 +19,7 @@ import { CommonModule } from '@angular/common';
     AlbumCardModule,
     CommonModule,
     EmbeddedVideoModule,
+    NavBarModule,
     SongCardModule,
   ],
   providers: [],

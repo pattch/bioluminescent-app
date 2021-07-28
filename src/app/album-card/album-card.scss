@@ -20,8 +20,8 @@ Example:
 
 */
 
-$box-width: 750px;
-$box-height: 750px;
+$box-width: 400px;
+$box-height: 400px;
 $title-font-size: math.div($box-width, 20);
 $artist-font-size: math.div($box-width, 25);
 .card {
