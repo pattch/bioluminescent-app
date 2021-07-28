@@ -7,7 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SongCard implements OnInit {
 
-  // @Input() song: Song = {title: 'Placeholder', mediaSource: 'none'};
   @Input() title: string = '';
   @Input() artwork: string = '';
 
@@ -33,7 +32,6 @@ export class SongCard implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('xxxx title', this.title, 'artwork', this.artwork)
   }
 
 }
