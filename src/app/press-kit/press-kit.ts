@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, QueryList, ViewChildren } from '@angular/core';
+
+import { SongCard } from '../song-card';
 
 interface Song {
   title: string;
@@ -34,6 +36,17 @@ export class PressKit {
     {...fileParams, title: 'april', filename: 'april.mp3'},
   ];
 
+  @ViewChildren(SongCard) songs?: QueryList<SongCard>;
+
   constructor() { }
 
+  // TODO: Pause videos the same way as we pause songs here
+  handleSourceChange(id: string) {
+    // Pause all songs besides the new song
+    for (const song of this.songs || []) {
+      if (song.id !== id) {
+        song.pause();
+      }
+    }
+  }
 }

@@ -7,13 +7,15 @@
   </embedded-video>
   <div class="card">
     <!-- TODO: Consider simply writing these songs out here -->
-    <div *ngFor="let song of bioluminescentSongs">
-      <song-card [title]="song.title"
+    <div *ngFor="let song of bioluminescentSongs; index as i">
+      <song-card [id] ="'bioluminescent-song-' + i"
+                [title]="song.title"
                 [artwork]="song.artwork || 'bioluminescent_small.jpg'"
                 [mediaSource]="song.mediaSource"
                 [filename]="song.filename"
                 [audioType]="song.audioType"
                 [url]="song.url"
+                (playing)="handleSourceChange($event)"
       >
       </song-card>
     </div>

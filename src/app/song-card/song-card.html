@@ -1,4 +1,7 @@
-<div class="song-container">
+<div class="song-container"
+  [ngClass]="{'isPlaying': isPlaying}"
+  (click)="handleClick()"
+>
   <span class="artwork" *ngIf="artwork">
     <img class="artwork" [src]="artworkUrl" alt="artwork">
   </span>
@@ -8,7 +11,7 @@
 
     <ng-container [ngSwitch]="mediaSource">
         <span *ngSwitchCase="'file'" class="song embedded-file">
-          <audio controls>
+          <audio #player controls>
             <source [src]="fileUrl" [type]="audioType">
             Your browser does not support the audio element.
           </audio>
