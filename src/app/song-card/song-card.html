@@ -3,17 +3,17 @@
     <img class="artwork" [src]="artworkUrl" alt="artwork">
   </span>
 
-  <span class="title">{{title}}</span>
+  <span class="content">
+    <span class="title">{{title}}</span>
 
-  <span class="spacer">&nbsp;</span>
-
-  <ng-container [ngSwitch]="mediaSource">
-      <span *ngSwitchCase="'file'" class="embedded-file">
-        <audio controls>
-          <source [src]="fileUrl" [type]="audioType">
-          Your browser does not support the audio element.
-        </audio>
-      </span>
-      <!-- TODO: Support embedding from external sources e.g. Sound Cloud -->
-  </ng-container>
+    <ng-container [ngSwitch]="mediaSource">
+        <span *ngSwitchCase="'file'" class="song embedded-file">
+          <audio controls>
+            <source [src]="fileUrl" [type]="audioType">
+            Your browser does not support the audio element.
+          </audio>
+        </span>
+        <!-- TODO: Support embedding from external sources e.g. Sound Cloud -->
+    </ng-container>
+  </span>
 </div>

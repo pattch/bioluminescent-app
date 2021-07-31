@@ -15,7 +15,9 @@
     align-self: center;
     margin-top: 32px;
     margin-bottom: 32px;
-    width: 50%;
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 32px;
   }
 
   embedded-video {
@@ -36,6 +38,14 @@
 
     embedded-video {
       width: 100%;
+    }
+  }
+}
+
+@media(max-width: 550px) {
+  .content {
+    .card {
+      padding: 0;
     }
   }
 }
