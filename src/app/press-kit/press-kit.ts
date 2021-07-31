@@ -25,8 +25,6 @@ const fileParams = {
   styleUrls: ['./press-kit.scss']
 })
 export class PressKit {
-  readonly navBarIncluded = true;
-
   // TODO: Consider simply implementing this in the template
   readonly bioluminescentSongs: Song[] = [
     {...fileParams, title: 'intro', filename: 'intro.mp3'},
