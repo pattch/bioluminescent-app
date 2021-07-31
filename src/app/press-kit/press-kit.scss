@@ -11,8 +11,7 @@
 
   album-card {
     align-self: center;
-    margin-top: 64px;
-    margin-bottom: 64px;
+    margin: 64px 0 64px 0;
   }
 
   .card {
@@ -33,6 +32,11 @@
     &.navbar-included {
       width: 100%;
       margin-left: 0;
+    }
+
+    album-card {
+      width: 100%;
+      margin: 48px 0 16px 0;
     }
   }
 }
