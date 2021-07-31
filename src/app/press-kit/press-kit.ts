@@ -25,10 +25,6 @@ const fileParams = {
   styleUrls: ['./press-kit.scss']
 })
 export class PressKit {
-
-  readonly videoWidth = 854;
-  readonly videoHeight = 480;
-
   readonly navBarIncluded = true;
 
   // TODO: Consider simply implementing this in the template

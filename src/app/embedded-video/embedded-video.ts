@@ -6,12 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./embedded-video.scss'],
 })
 export class EmbeddedVideo {
-
-  @Input() width: number = 1280;
-  @Input() height: number = 720;
-
   @Input() source!: string;
 
   constructor() {}
-
 }

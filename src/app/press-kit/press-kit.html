@@ -2,15 +2,9 @@
   <nav-bar *ngIf="navBarIncluded">
   </nav-bar>
   <album-card></album-card>
-  <embedded-video [width]="videoWidth"
-                  [height]="videoHeight"
-                  [source]="'https://www.youtube.com/embed/E-sql3OUo34'"
-  >
+  <embedded-video [source]="'https://www.youtube.com/embed/E-sql3OUo34'">
   </embedded-video>
-  <embedded-video [width]="videoWidth"
-                  [height]="videoHeight"
-                  [source]="'https://www.youtube.com/embed/V2Pct1RsFec'"
-  >
+  <embedded-video [source]="'https://www.youtube.com/embed/V2Pct1RsFec'">
   </embedded-video>
   <div class="card">
     <!-- TODO: Consider simply writing these songs out here -->
