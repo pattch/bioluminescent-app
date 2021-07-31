@@ -5,4 +5,32 @@
   top: 0;
   left: 0;
   background-color: #2C3E50;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 32px;
+
+  .nav-link-container {
+    flex: 1 1 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .nav-link {
+      flex: 0 1 auto;
+      font-size: 48px;
+      color: #fff;
+      text-shadow: none;
+      transition: text-shadow ease-in-out 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        text-shadow: 0 0 5px #fff;
+      }
+
+      &:active {
+        color: #ffc;
+      }
+    }
+  }
 }

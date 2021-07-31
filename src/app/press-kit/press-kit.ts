@@ -29,7 +29,7 @@ export class PressKit {
   readonly videoWidth = 854;
   readonly videoHeight = 480;
 
-  readonly navBarIncluded = false;
+  readonly navBarIncluded = true;
 
   // TODO: Consider simply implementing this in the template
   readonly bioluminescentSongs: Song[] = [
