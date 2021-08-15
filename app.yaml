@@ -1,0 +1,7 @@
+runtime: python39
+handlers:
+- url: /
+  static_files: bioluminescent-app/index.html
+  upload: bioluminescent-app/index.html
+- url: /
+  static_dir: bioluminescent-app
